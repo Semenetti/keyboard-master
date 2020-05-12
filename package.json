@@ -1,0 +1,51 @@
+{
+  "name": "keyboard-master",
+  "version": "1.0.0",
+  "description": "Learn to blind typing on keyboard",
+  "main": "./src/index.js",
+  "scripts": {
+    "lint": "npx eslint ./src --fix",
+    "server": "webpack-dev-server",
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Semenetti/keyboard-master.git"
+  },
+  "keywords": [
+    "Keyboard",
+    "blind",
+    "typing"
+  ],
+  "author": "Adriano Semenetti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Semenetti/keyboard-master/issues"
+  },
+  "homepage": "https://github.com/Semenetti/keyboard-master#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.5.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-loader": "^4.0.0",
+    "eslint-plugin-import": "^2.20.2",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.0.4",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}

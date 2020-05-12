@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+html {
+    padding:0px;
+    margin:0px;
+    text-align:center;    
+    font-size: 10px;    
+    height: 100%;    
+    font-family: 'Ubuntu', sans-serif;   
+}
+
+body {
+    background-color: #000;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+  }
+  
+  h1 {
+      color: crimson;
+      text-align: center;      
+      padding: 50px 0;
+      font-size: 7rem;
+  }
+
+  
+  .keyboard {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    border: 2px solid red;
+    padding: 25px 0px;
+    align-items: center;
+    // background: #888;
+    // box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 50px crimson;
+    user-select: none;
+    transition: bottom 0.4s;
+    z-index: 1;
+    width: 1024px;
+    margin: 0 auto;
+  }
+  
+  .row {
+    list-style: none;
+    display: flex;    
+  }
+  ul {
+      padding: 0;
+      margin: 0;
+      
+  }
+  
+  li {
+    width: 55px;
+    height: 55px;
+    // color: rgba(0,0,0,0.5);
+    color: #000;    
+    border-radius: .4rem;
+    line-height: 49px;
+    letter-spacing: .1rem;
+    margin: 0.4rem;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: 900;    
+    // box-shadow: 0 0 7px #fff;
+  }
+  
+  #Tab {
+    width: 5em;
+  }
+  
+  #CapsLock {
+    width: 6em;
+  }
+  
+  #ShiftLeft {
+    width: 7.7em;
+  }
+  
+  #Enter {
+    width: 6em;
+  }
+  
+  #ShiftRight {
+    width: 8em;
+  }
+  #ControlLeft {
+    width: 3.2em;
+  }
+  #ControlRight {
+    width: 3.2em;
+  }
+  #Backspace {
+    width: 5em;
+  }
+  #Space {
+    width: 31em;    
+  }
+  
+  .pink { 
+    background-color: crimson;
+    border: 3px solid crimson;
+    box-sizing: border-box;
+}
+.pink.active {
+    color: crimson;
+}
+.peru {
+    background-color: #4682B4;
+    border: 3px solid #4682B4;
+    box-sizing: border-box;
+  }
+.peru.active {
+    color: #4682B4;
+ }
+  
+  .ring { 
+    background-color: coral;
+    border: 3px solid coral;
+    box-sizing: border-box;
+  }
+  .ring.active {
+    color: coral;
+  }
+  
+  .middle { 
+    background-color: darkorange;
+    border: 3px solid darkorange;
+    box-sizing: border-box;
+  }
+  .middle.active {
+    color: darkorange;
+  }
+  
+  .pointer-left { 
+    background-color: gold;
+    border: 3px solid gold;
+    box-sizing: border-box;
+  }
+  .pointer-left.active {
+    color: gold;
+  }
+  
+  .pointer-right { 
+    background-color: #228B22;
+    border: 3px solid #228B22;
+    box-sizing: border-box;
+  }
+  .pointer-right.active {
+    color: #228B22;    
+  }
+
+  .default {
+    background-color: khaki;
+    border: 3px solid khaki;
+    box-sizing: border-box;
+  }
+  .default.active {
+    color: khaki;    
+  }
+
+  
+  
+  .fill-out-key {
+    background-color: slategrey;
+    border: 2px solid slategrey;
+  }
+  
+  .active {
+    background-color: transparent;
+    // box-shadow: 0 0px 15px crimson;        
+        -webkit-animation: vibrate-1 0.3s linear infinite both;
+              animation: vibrate-1 0.3s linear infinite both;
+  }
+  
+   
+  .hit {
+      -webkit-animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: hit 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  }
+  
+  @-webkit-keyframes hit {
+    0% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes hit {
+    0% {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
+  @-webkit-keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
+  @keyframes vibrate-1 {
+    0% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+    20% {
+      -webkit-transform: translate(-2px, 2px);
+              transform: translate(-2px, 2px);
+    }
+    40% {
+      -webkit-transform: translate(-2px, -2px);
+              transform: translate(-2px, -2px);
+    }
+    60% {
+      -webkit-transform: translate(2px, 2px);
+              transform: translate(2px, 2px);
+    }
+    80% {
+      -webkit-transform: translate(2px, -2px);
+              transform: translate(2px, -2px);
+    }
+    100% {
+      -webkit-transform: translate(0);
+              transform: translate(0);
+    }
+  }
