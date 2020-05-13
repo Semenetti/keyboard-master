@@ -3,6 +3,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, options) => {
     const isProduction = options.mode === 'production';
@@ -15,7 +16,10 @@ module.exports = (env, options) => {
         output: {
             filename: 'script.js',
             path: path.join(__dirname, '/dist'),
-        },       
+        },
+        optimization: {
+            minimizer: [new UglifyJsPlugin()],
+          },
         module: {
             rules: [
                 {
