@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import keys from './js/keys';
 import loseAudioIfClickedWrongKey from './js/audio';
 
@@ -23,8 +24,42 @@ function targetRandomKey() {
   }
 }
 
-document.addEventListener('keyup', (event) => {
-  const keyPressed = event.code;
+
+const cancelCommandKeysDefaultActions = (e) => {
+  const TAB = 'Tab';
+  const ALT = 'Alt';
+  const BACKSPACE = 'Backspace';
+  const ENTER = 'Enter';
+
+  let key;
+
+  switch (e.key) {
+    case TAB:
+      e.preventDefault();
+      key = e.code;
+      break;
+    case ALT:
+      e.preventDefault();
+      key = e.code;
+      break;
+    case BACKSPACE:
+      e.preventDefault();
+      key = e.code;
+      break;
+    case ENTER:
+      e.preventDefault();
+      key = e.code;
+      break;
+    default:
+      key = e.code;
+      break;
+  }
+  return key;
+};
+
+
+document.addEventListener('keydown', (event) => {
+  const keyPressed = cancelCommandKeysDefaultActions(event);
 
   if (document.getElementById(keyPressed)) {
     const keyElement = document.getElementById(keyPressed);
